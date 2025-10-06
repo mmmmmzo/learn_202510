@@ -90,7 +90,7 @@ function showResult() {
 async function fetchAndRenderQuotes() {
     quote.innerHTML = '';
     textarea.value = '';
-    const randam = Math.floor((Math.random() * (20 + 1))); // データランダムにしてるだけ
+    const randam = Math.floor((Math.random() * 20)) + 1; // データランダムにしてるだけ
     const RANDOM_QUOTE_API_URL = `https://jsonplaceholder.typicode.com/todos/${randam}`;
     const response = await fetch(RANDOM_QUOTE_API_URL);
     const data = await response.json();
